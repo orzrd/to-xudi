@@ -1,6 +1,0 @@
-# Myapp
-
-## Usage
-
-## Installation
-

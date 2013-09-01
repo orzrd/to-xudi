@@ -24,6 +24,6 @@
   "Hello, Dongweiming!")
 
 @url GET "/test"
-(defun index (params)
+(defun test (params)
   @ignore params
-    (render "test.html"))
+  (render "test.html"))
