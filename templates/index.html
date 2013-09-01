@@ -1,0 +1,121 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <title>Admaster: @厂公</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <style type="text/css">
+    @font-face {
+      font-family: digit;
+      src: url('static/fonts/ComicSansMs.ttf') format("truetype");
+    }
+  </style>
+  <link href="static/stylesheets/default.min.css" type="text/css" rel="stylesheet" media="screen" />
+  <link href="static/stylesheets/supersized.min.css" type="text/css" rel="stylesheet" media="screen" />
+  <script type="text/javascript" src="static/js/jquery.min.js"></script>
+  <script type="text/javascript" src="static/js/garden.min.js"></script>
+  <script type="text/javascript" src="static/js/functions.min.js"></script>
+  <script type="text/javascript" src="static/js/jquery.easing.min.js"></script> 
+  <script type="text/javascript" src="static/js/supersized.3.2.7.min.js"></script>
+
+</head>
+
+<body>
+  <div id="mainDiv">
+    <div id="content">
+      <div id="code">
+        <span class="note">; 程序员写给程序员的诗~</span><br />
+          (<span class="keyword">defun</span> say-to-xudi (&rest some-words)<br />
+          <span class="placeholder"/>(<span class="string">if</span> (<span class="string">equal</span> :show-number (<span class="string">car</span> (<span class="string">last</span> some-words)))<br />
+          <span class="placeholder"/><span class="placeholder"/>(<span class="string">dolist</span> (word (<span class="string">butlast</span> some-words))<br />
+          <span class="placeholder"/><span class="placeholder"/><span class="placeholder"/>(<span class="string">format</span> t "  ~a. ~a~%"  (+ (position word some-words) 1) word))<br />
+          <span class="placeholder"/><span class="placeholder"/>(<span class="string">format</span> t "~{~a~%~}" some-words)))<br />
+          (<span class="keyword">defmacro</span> say (func &rest args)<br />
+          <span class="placeholder"/><span class="quote">`</span>(<span class="string">funcall</span> (<span class="string">read-from-string</span> ,func) ,@args))<br />
+          <span class="comments">; 只觉三生有幸事，相逢一见如故人</span><br />
+          (<span class="keyword">defun</span> first-meet ()<br />
+          <span class="placeholder"/>(<span class="custom">say-to-xudi</span> "Admaster来了一个清秀的小男人-徐迪,黑黑的皮肤贱贱的笑"))<br />
+          (<span class="keyword">defun</span> since-morning-party ()<br />
+          <span class="placeholder"/>(<span class="custom">say-to-xudi</span> "原来徐迪懂fp,竟然还会clojure!!!"))<br />
+          (<span class="keyword">defun</span> i-do-not-know-when-to-begin ()<br />
+          <span class="comments">; 那军饷被掏空, 后宫有佳丽三千却不能碰</span><br />
+          <span class="placeholder"/>(<span class="custom">say-to-xudi</span> "徐迪成为了厂公,官居二品,杨博无法望其项背"))<br />
+          <span class="comments">; 这丫都说了好几个月才等到了今天，我去</span><br />
+          (<span class="keyword">defun</span> bad-news-came ()<br />
+          <span class="placeholder"/>(<span class="custom">say-to-xudi</span> "不记得是哪一天,厂公说他要去读研了，在苏州的XXX大学-有人欢喜有人愁"))<br />
+          (<span class="keyword">defun</span> xiong-qi ()<br />
+          <span class="comments">; 因为程序员编的媳妇程序运行失败，编的女友程序被别人插了后门，只能闷骚的编女人程序成天YY！</span><br />
+          <span class="placeholder"/>(<span class="custom">say-to-xudi</span> "不知从哪一天,厂公在admaster的基调引导下,开始积极表达自己:"<br />
+          <span class="placeholder"/><span class="placeholder"/>"厂公去KTV唱歌了!"<br />
+          <span class="placeholder"/><span class="placeholder"/>"厂公和妹子表白了(虽然被拒)!!"<br />
+          <span class="placeholder"/><span class="placeholder"/>"厂公还会uno!!!" :show-number))<br />
+          <span class="comments">; 成天说会了X语言, 但没干过让我觉得牛逼的事情的人都是渣渣</span><br />
+          (<span class="keyword">defun</span> my-suggestion ()<br />
+          <span class="placeholder"/>(<span class="custom">say-to-xudi</span> "今天是最后一天，小明有几句话送给厂公，并且祝读研时代xing福(Not Use Hand)"))<br />
+          <span class="placeholder"/>(<span class="custom">say-to-xudi</span> "花三分之一让自己有趣-跟我读: 要-有-趣"<br />
+          <span class="placeholder"/><span class="placeholder"/>"放弃java跟我们混吧: 前面一片黑暗"<br />
+          <span class="placeholder"/><span class="placeholder"/>"厂公啊你不懂女人的心( ⊙o⊙ )哇"<br />
+          <span class="placeholder"/><span class="placeholder"/>"还没表白的,今晚...额额 你懂得"<br />
+          <span class="placeholder"/><span class="placeholder"/>"没有女友，你混到了不少基友" :show-number))<br />
+          (<span class="keyword">loop</span> <span class="keyword">for</span> fn <span class="keyword">in</span> <span class="quote">'</span>("first-meet" "since-morning-party" "i-do-not-know-when-to-begin" <span class="quote">\</span><br />
+          <span class="placeholder"/>"bad-news-came" "xiong-qi" "last-day"))<br />
+          <span class="placeholder"/><span class="keyword">do</span> (<span class="custom">say</span> fn))
+      </div>
+      <div id="loveHeart">
+        <canvas id="garden"></canvas>
+        <div id="words">
+          <div id="messages">
+            厂公: 我会想起你, 一路走好~
+            <div id="elapseClock"></div>
+          </div>
+          <div id="loveu">
+            Admaster.<br/>
+            <div class="signature">- 小明明</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <audio controls loop>
+    <source src="static/music/fxy.ogg" type="audio/ogg">
+    <source src="static/music/fxy.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+  </audio>
+  <footer>
+    Designed by Dongweiming | Powered by <a href="https://github.com/fukamachi/caveman"><span data-title="Caveman">Caveman</span></a> on <a href="http://en.wikipedia.org/wiki/Common_Lisp"><span data-title="Common_Lisp">Common_Lisp</span></a>, <a href="https://github.com/buildinternet/supersized"><span data-title="Supersized">Supersized</span></a> and <a href="https://github.com/jquery/jquery"><span data-title="Jquery">Jquery</span></a>
+  </footer>
+  <script type="text/javascript">
+    var offsetX = $("#loveHeart").width() / 2;
+    var offsetY = $("#loveHeart").height() / 2 - 55;
+    var together = new Date();
+    together.setFullYear(2013, 8, 4);
+    together.setHours(18);
+    together.setMinutes(30);
+    together.setSeconds(0);
+    together.setMilliseconds(0);
+    
+    if (!document.createElement('canvas').getContext) {
+      var msg = document.createElement("div");
+      msg.id = "errorMsg";
+      msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+      document.body.appendChild(msg);
+      $("#code").css("display", "none")
+      $("#copyright").css("position", "absolute");
+      $("#copyright").css("bottom", "10px");
+        document.execCommand("stop");
+    } else {
+      setTimeout(function () {
+        startHeartAnimation();
+      }, 4000);
+
+      timeElapse(together);
+      setInterval(function () {
+        timeElapse(together);
+      }, 500);
+
+      adjustCodePosition();
+      $("#code").typewriter();
+    }
+  </script>
+</body>
+</html>
+
